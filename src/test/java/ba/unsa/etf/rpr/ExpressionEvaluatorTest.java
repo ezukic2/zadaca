@@ -63,4 +63,11 @@ public class ExpressionEvaluatorTest {
                 ()->{ee.evaluate("( 1 + 2 + 3 )");});
     }
 
+    @Test
+    public void Test10(){
+        ExpressionEvaluator ee = new ExpressionEvaluator();
+        Throwable exception = Assertions.assertThrows(RuntimeException.class,
+                ()->{ee.evaluate("( 1 + ( 1 + 2 ) / ( 2 * 3 ) )");});
+    }
+
 }
