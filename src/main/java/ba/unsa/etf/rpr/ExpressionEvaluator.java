@@ -51,6 +51,7 @@ public class ExpressionEvaluator {
                     values.push(v);
                 } else values.push(Double.parseDouble(substring));
         }
+        if(!operands.isEmpty()) throw new RuntimeException("Pogreska pri unosu");
         return values.pop();
     }
 }

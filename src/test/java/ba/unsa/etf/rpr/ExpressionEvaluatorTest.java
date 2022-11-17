@@ -8,7 +8,7 @@ public class ExpressionEvaluatorTest {
     @Test
     public void Test1(){
         ExpressionEvaluator ee = new ExpressionEvaluator();
-        Assertions.assertEquals(101.0, ee.evaluate("( 1 + ( 5 * 20 )"));
+        Assertions.assertEquals(101.0, ee.evaluate("( 1 + ( 5 * 20 ) )"));
     }
 
     @Test
@@ -54,6 +54,13 @@ public class ExpressionEvaluatorTest {
         ExpressionEvaluator ee = new ExpressionEvaluator();
         Throwable exception = Assertions.assertThrows(RuntimeException.class,
                 ()->{ee.evaluate("( 1 + ( ( 2 + 3.s8 ) * ( 4kp.3 * 5 ) ) )");});
+    }
+
+    @Test
+    public void Test9(){
+        ExpressionEvaluator ee = new ExpressionEvaluator();
+        Throwable exception = Assertions.assertThrows(RuntimeException.class,
+                ()->{ee.evaluate("( 1 + 2 + 3 )");});
     }
 
 }
