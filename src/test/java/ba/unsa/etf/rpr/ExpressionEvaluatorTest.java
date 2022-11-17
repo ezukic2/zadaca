@@ -27,21 +27,21 @@ public class ExpressionEvaluatorTest {
     public void Test4(){
         ExpressionEvaluator ee = new ExpressionEvaluator();
         Assertions.assertThrows(RuntimeException.class,
-                ()->{ee.evaluate("( 1 + ( (  2 + 3 ) * ( 4 * 5 ) ) )");});
+                ()-> ee.evaluate("( 1 + ( (  2 + 3 ) * ( 4 * 5 ) ) )"));
     }
 
     @Test
     public void Test5(){
         ExpressionEvaluator ee = new ExpressionEvaluator();
         Assertions.assertThrows(RuntimeException.class,
-                ()->{ee.evaluate("( 1 + ( (2 + 3 ) * ( 4 * 5 ) ) )");});
+                ()-> ee.evaluate("( 1 + ( (2 + 3 ) * ( 4 * 5 ) ) )"));
     }
 
     @Test
     public void Test6(){
         ExpressionEvaluator ee = new ExpressionEvaluator();
         Assertions.assertThrows(RuntimeException.class,
-                ()->{ee.evaluate("( 1 + ( ( 2 + 3 ) * ( 4kp * 5 ) ) )");});
+                ()-> ee.evaluate("( 1 + ( ( 2 + 3 ) * ( 4kp * 5 ) ) )"));
     }
 
     @Test void Test7() throws Exception {
@@ -53,21 +53,21 @@ public class ExpressionEvaluatorTest {
     public void Test8(){
         ExpressionEvaluator ee = new ExpressionEvaluator();
         Assertions.assertThrows(RuntimeException.class,
-                ()->{ee.evaluate("( 1 + ( ( 2 + 3.s8 ) * ( 4kp.3 * 5 ) ) )");});
+                ()-> ee.evaluate("( 1 + ( ( 2 + 3.s8 ) * ( 4kp.3 * 5 ) ) )"));
     }
 
     @Test
     public void Test9(){
         ExpressionEvaluator ee = new ExpressionEvaluator();
         Assertions.assertThrows(RuntimeException.class,
-                ()->{ee.evaluate("( 1 + 2 + 3 )");});
+                ()-> ee.evaluate("( 1 + 2 + 3 )"));
     }
 
     @Test
     public void Test10(){
         ExpressionEvaluator ee = new ExpressionEvaluator();
         Assertions.assertThrows(RuntimeException.class,
-                ()->{ee.evaluate("( 1 + ( 1 + 2 ) / ( 2 * 3 ) )");});
+                ()-> ee.evaluate("( 1 + ( 1 + 2 ) / ( 2 * 3 ) )"));
     }
 
 }
