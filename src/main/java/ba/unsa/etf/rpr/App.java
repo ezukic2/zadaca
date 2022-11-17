@@ -9,11 +9,11 @@ public class App
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();
         ExpressionEvaluator ee = new ExpressionEvaluator();
-        try{
+        try {
             System.out.println("Rješenje je " + ee.evaluate(str));
-        }catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             throw new RuntimeException("Pogreska pri unosu");
-        } catch(RuntimeException e){
+        } catch (Exception e) {
             e.getMessage();
         }
     }

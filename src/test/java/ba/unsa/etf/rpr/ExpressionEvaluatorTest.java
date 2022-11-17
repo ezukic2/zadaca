@@ -6,19 +6,19 @@ import org.junit.jupiter.api.Test;
 public class ExpressionEvaluatorTest {
 
     @Test
-    public void Test1(){
+    public void Test1() throws Exception {
         ExpressionEvaluator ee = new ExpressionEvaluator();
         Assertions.assertEquals(101.0, ee.evaluate("( 1 + ( 5 * 20 ) )"));
     }
 
     @Test
-    public void Test2(){
+    public void Test2() throws Exception {
         ExpressionEvaluator ee = new ExpressionEvaluator();
         Assertions.assertEquals(101.0, ee.evaluate("( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) ) "));
     }
 
     @Test
-    public void Test3(){
+    public void Test3() throws Exception {
         ExpressionEvaluator ee = new ExpressionEvaluator();
         Assertions.assertEquals(0.25, ee.evaluate("( ( 8 - 3 ) / ( ( 4 * 3 ) + ( 64 sqrt ) ) )"));
     }
@@ -44,9 +44,9 @@ public class ExpressionEvaluatorTest {
                 ()->{ee.evaluate("( 1 + ( ( 2 + 3 ) * ( 4kp * 5 ) ) )");});
     }
 
-    @Test void Test7(){
+    @Test void Test7() throws Exception {
         ExpressionEvaluator ee = new ExpressionEvaluator();
-        Assertions.assertEquals(0.25, ee.evaluate("    ( ( 8.72 - 3.22 ) / ( ( 7.8 * 1.25 ) + ( 12.25 sqrt ) ) )  "));
+        Assertions.assertEquals(0.25, ee.evaluate("    ( ( 8.72 - 3.22 ) / ( ( 7.8 * 1.25 ) + ( 150.0625 sqrt ) ) )  "));
     }
 
     @Test

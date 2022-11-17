@@ -3,7 +3,7 @@ package ba.unsa.etf.rpr;
 import java.util.Stack;
 
 public class ExpressionEvaluator {
-    public Double evaluate(String string) {
+    public Double evaluate(String string) throws Exception{
         Stack<String> operands = new Stack<String>();
         Stack<Double> values = new Stack<Double>();
         string = string.trim(); //remove spaces from both sides
